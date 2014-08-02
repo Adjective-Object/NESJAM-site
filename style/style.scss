@@ -464,4 +464,32 @@ nav{
 			font-size: $gridunit;
 		}
 	}
+
+	nav{
+		right: $gridunit/2;
+		a:after, a:before{
+			font-size: $gridunit * 0.75;
+		}
+
+		a:before{
+			top:6px;
+		}
+
+		a:after{
+			top: 14px;
+			border-width:$gridunit/3 !important;
+
+			right:2 + $gridunit/2 + $gridunit/4;
+		}
+	}
+
+
+	#about{
+		h1{
+			font-size: $gridunit * 1.5;
+		}
+		p{
+			font-size: $gridunit * 0.75 !important;
+		}
+	}
 }

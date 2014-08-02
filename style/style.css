@@ -316,4 +316,20 @@ nav {
   #intro time {
     font-size: 36px; }
   #intro p {
-    font-size: 24px; } }
+    font-size: 24px; }
+
+  nav {
+    right: 12px; }
+    nav a:after, nav a:before {
+      font-size: 18px; }
+    nav a:before {
+      top: 6px; }
+    nav a:after {
+      top: 14px;
+      border-width: 8px !important;
+      right: 20px; }
+
+  #about h1 {
+    font-size: 36px; }
+  #about p {
+    font-size: 18px !important; } }
