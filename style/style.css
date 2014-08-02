@@ -1,0 +1,258 @@
+/* setup */
+@font-face {
+  font-family: 'Pixel';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/C&C_Red_Alert_[INET].ttf) format("truetype"); }
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/Ralway/Raleway-Medium.woff) format("woff"); }
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: url(./fonts/Ralway/Raleway-Semibold.woff) format("woff"); }
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  color: #efefef;
+  font-family: Raleway;
+  min-width: 720px;
+  background-color: #6b6486; }
+  body > section {
+    padding: 24px;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; }
+
+/* Commons */
+a {
+  text-decoration: none;
+  outline: none; }
+
+h1 {
+  font-size: 48px;
+  line-height: 100%; }
+
+nav {
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  margin-top: -96px;
+  right: 24px;
+  text-align: right; }
+  nav a {
+    display: block;
+    height: 48px;
+    font-size: 24px;
+    line-height: 24px;
+    color: white;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    opacity: 0.5; }
+  nav a:hover {
+    opacity: 1; }
+  nav a:before {
+    display: inline-block;
+    content: attr(data-text);
+    opacity: 0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transform: translate(24px);
+    -moz-transform: translate(24px);
+    -ms-transform: translate(24px);
+    -o-transform: translate(24px);
+    transform: translate(24px); }
+  nav a:hover:before {
+    opacity: 1;
+    -webkit-transform: translateX(-12px);
+    -moz-transform: translateX(-12px);
+    -ms-transform: translateX(-12px);
+    -o-transform: translateX(-12px);
+    transform: translateX(-12px); }
+
+.content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#intro {
+  position: relative;
+  text-align: center;
+  min-height: 480px;
+  background-color: #c6a9a3; }
+  #intro img {
+    width: 480px;
+    height: 224px;
+    position: relative;
+    top: 50%;
+    -webkit-box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2); }
+  #intro h1 {
+    position: relative;
+    top: -60px;
+    margin-bottom: -84px;
+    font-size: 144px;
+    line-height: 100%;
+    /* webkit only gradient on text*/
+    background-image: -webkit-linear-gradient(top, white, #e3d5d2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+    #intro h1 em {
+      font-size: 1.2em;
+      font-family: Pixel;
+      font-style: normal; }
+  #intro time {
+    font-size: 48px; }
+  #intro p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    max-width: 480px; }
+
+.imgsplash:before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0; }
+.imgsplash > * {
+  position: relative;
+  z-index: 2; }
+
+.fold {
+  min-height: 240px; }
+
+.lighttext {
+  -webkit-box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ebd8b7;
+  color: #6b6b6b;
+  text-align: left;
+  padding: 48px; }
+
+#about {
+  background-color: #9a8194;
+  font-size: 0;
+  text-align: center; }
+  #about .content section {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    max-width: 720px; }
+  #about p {
+    margin-top: 24px;
+    font-size: 24px; }
+  #about .centeredimg {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    margin: 48px; }
+    #about .centeredimg img {
+      height: 360px;
+      position: absolute;
+      left: 50%;
+      margin-left: -180px;
+      -webkit-transform: rotate(15deg) scaleX(-1);
+      -moz-transform: rotate(15deg) scaleX(-1);
+      -ms-transform: rotate(15deg) scaleX(-1);
+      -o-transform: rotate(15deg) scaleX(-1);
+      transform: rotate(15deg) scaleX(-1); }
+  #about .content .imgs {
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 720px; }
+    #about .content .imgs a {
+      width: 30%;
+      position: relative;
+      display: inline-block; }
+    #about .content .imgs a:not(*:last-child) {
+      margin-right: 5%; }
+    #about .content .imgs img {
+      width: 100%;
+      -webkit-box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2); }
+
+#faq {
+  background-color: #99bbad;
+  text-align: center; }
+  #faq h1 {
+    font-size: 72px; }
+  #faq aside {
+    font-size: 24px;
+    margin-bottom: 12px; }
+  #faq h2 {
+    margin-bottom: 12px; }
+  #faq .question {
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    width: 480px;
+    padding: 24px;
+    margin: 12px;
+    background-color: #ebd8b7;
+    color: #6b6b6b;
+    position: relative;
+    font-size: 18px; }
+  #faq .contact {
+    margin: 24px;
+    color: #d6e4de;
+    width: 480px;
+    margin-right: auto;
+    margin-left: auto; }
+    #faq .contact a {
+      color: #f3faf7; }
+
+#footer {
+  margin: 24px;
+  padding: 0;
+  height: 132px; }
+  #footer .content > * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  #footer a {
+    width: 96px; }
+    #footer a img {
+      height: 96px;
+      height: 96px;
+      border-radius: 48px;
+      -webkit-box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2); }
+  #footer h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 12px;
+    font-weight: 400; }
+
+@media screen and (max-width: 820px) {
+  #about section {
+    display: block;
+    width: auto;
+    margin-right: 72px; }
+
+  #about section:nth-child(2) {
+    margin-right: auto;
+    margin-left: auto; } }

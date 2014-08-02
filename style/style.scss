@@ -1,0 +1,383 @@
+/* setup */
+$gridunit: 24px;
+$teal: #05b796;
+
+$white:#FFFFFF;
+$offwhite:#EFEFEF;
+
+$c1: #EBD8B7;
+$c2: #C6A9A3;
+$c3: #9A8194;
+$c4: #5B527F;
+$c5: #99BBAD;
+
+$transtime: 0.2s;
+$darktext: desaturate(darken($c1, 40%), 70%);
+
+@mixin transform($props){
+-webkit-transform: $props;
+   -moz-transform: $props;
+    -ms-transform: $props;
+     -o-transform: $props;
+        transform: $props;
+}
+
+@mixin transitions($time){
+-webkit-transition: all $time;
+   -moz-transition: all $time;
+	-ms-transition: all $time;
+	 -o-transition: all $time;
+		transition: all $time;
+}
+
+@mixin dropshadow{
+	-webkit-box-shadow: 0 $gridunit $gridunit 0 rgba(0,0,0,0.2);
+	box-shadow: 0 $gridunit $gridunit 0 rgba(0,0,0,0.2);
+}
+
+@font-face {
+	font-family: 'Pixel';
+	font-style: normal;
+	font-weight: 400;
+	src: url(./fonts/C&C_Red_Alert_[INET].ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/Ralway/Raleway-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: url(./fonts/Ralway/Raleway-Semibold.woff) format('woff');
+}
+
+*,*:before, *:after{
+	margin:0;
+	padding:0;
+	box-sizing: border-box ;
+}
+
+html, body{
+	height:100%;
+}
+
+body{
+	color: $offwhite;
+	font-family:Raleway;
+	min-width: 30 * $gridunit;
+	background-color: lighten(desaturate($c4, 7%), 5%);
+
+	& > section {
+		padding: $gridunit;
+		position:relative;
+
+		background-attachment:fixed;
+		background-position:center;
+		background-size:cover;
+
+	}
+}
+
+/* Commons */
+
+a{
+	text-decoration:none;
+	outline:none;
+}
+
+
+h1{	
+	font-size: 2 * $gridunit;
+	line-height:100%;
+}
+
+nav{
+	position:fixed;
+	z-index:5;
+	top:50%;
+	margin-top:-$gridunit * 4;
+	right:$gridunit;
+
+	text-align:right;;
+	a{
+		display:block;
+		height:$gridunit * 2;
+		font-size: $gridunit;
+		line-height:$gridunit;
+		color: $white;
+		@include transitions($transtime);
+		opacity:0.5;
+	}
+	a:hover{
+		opacity:1;
+	}
+
+	a:before{
+		display: inline-block;
+		content: attr(data-text);
+		opacity:0;
+		@include transitions($transtime);
+		@include transform(translate($gridunit));
+	}
+	a:hover:before{
+		opacity:1;
+		@include transform(translateX(-$gridunit/2));
+	}
+
+}
+
+.content{
+	max-width: $gridunit * 50;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#intro{
+	position: relative;
+	text-align: center;
+	min-height:$gridunit * 20; // TODO this
+
+	$imgratio: 	574 / 1230; // height over width
+	$imgwidth: $gridunit * 20;
+	$imgheight: $imgratio * $imgwidth;
+	img{
+		width: $imgwidth;
+		height: $imgheight;
+		position:relative;
+		top:50%;
+
+		@include dropshadow;
+	}
+
+	h1{
+
+		position:relative;
+		$voff: -$gridunit * 2.5;
+		top: $voff;
+		margin-bottom: $voff - $gridunit;
+
+		em{
+			font-size: 1.2em;
+			font-family: Pixel;
+			
+			font-style: normal;
+		}
+		
+		font-size: 6 * $gridunit;
+		line-height:100%;
+
+  		/* webkit only gradient on text*/
+  		background-image: -webkit-linear-gradient(top, $white, lighten($c2,15%));
+		-webkit-background-clip:text;
+		-webkit-text-fill-color: transparent;
+
+  		
+	}
+
+	time{
+		font-size:$gridunit * 2;
+	}
+
+	p{
+		margin-left: auto;
+		margin-right: auto;
+		font-size: $gridunit;
+		max-width: $gridunit * 20;
+	}
+
+	background-color: $c2;
+}
+
+.imgsplash{
+	&:before{
+		content:"";
+		position:absolute;
+		display:block;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		z-index:0;
+	}
+
+	& > *{
+		position:relative;
+		z-index:2;
+	}
+}
+
+.fold{
+	min-height:$gridunit * 10;
+	//height:100%;
+}
+
+.lighttext{
+	@include dropshadow;
+	background-color: $c1;
+	color: $darktext;
+	text-align:left;	
+	padding: $gridunit * 2;
+	}
+
+#about{
+	background-color: $c3;
+	font-size: 0;
+	text-align:center;
+
+	.content section{
+		vertical-align:top;
+		display:inline-block;
+		position:relative;
+		max-width: 30 * $gridunit;
+	}
+
+	p{
+		margin-top: $gridunit;
+		font-size: $gridunit;
+	}
+
+	.centeredimg{
+		position:relative;
+		width:$gridunit * 15;
+		height:$gridunit * 15;
+		margin: $gridunit * 2;
+		img{
+			height:$gridunit * 15;
+
+			position:absolute;
+			left:50%;
+			margin-left: -$gridunit * 7.5;
+			@include transform(rotate(15deg) scaleX(-1));
+			//@include dropshadow; --TODO this once it's svg
+		}
+	}
+
+	.content .imgs{
+		display:block;
+		margin-top: $gridunit * 2;
+		margin-bottom: $gridunit;
+		display:block;
+		margin-right: auto;
+		margin-left:auto;
+
+		max-width: 30 * $gridunit;
+
+
+		a{
+			width:30%;
+			position:relative;
+			display:inline-block;			
+		}
+		a:not(*:last-child){
+			margin-right: 5%;
+		}
+		img{
+			width:100%;
+			@include dropshadow;
+		}
+	}
+}
+
+#faq{
+	background-color: $c5;
+	text-align:center;
+
+	h1{
+		font-size: 3 * $gridunit;
+	}
+
+	aside{
+		font-size: $gridunit;
+		margin-bottom: $gridunit/2;
+	}
+
+	h2{
+		margin-bottom: $gridunit/2;
+	}
+
+	.question{
+		text-align:left;
+		$imgdim: $gridunit * 2;
+		$imgpadding: $gridunit;
+
+		display:inline-block;
+		vertical-align: top;
+		width: $gridunit * 20;
+		padding: $gridunit;
+		margin: $gridunit/2;
+		background-color: $c1;
+		color: $darktext;
+
+		position:relative;
+		font-size: $gridunit*0.75;
+	}
+
+	.contact{
+		margin: $gridunit;
+		color: lighten($c5,20%);
+		width: $gridunit * 20;
+		margin-right:auto;
+		margin-left:auto;
+
+		a{
+			color: lighten(saturate($c5,20%),30%);
+		}
+	}
+}
+
+#footer{
+	
+	$imgsize: $gridunit * 4;
+	$fontsize: $gridunit ;
+	$textpad: $gridunit/2;
+	margin:$gridunit;
+	padding:0;
+	height: $imgsize + $fontsize + $textpad;
+
+
+	.content > *{
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	a{
+		width: $imgsize;
+		img{
+			height: $imgsize;
+			height: $imgsize;
+
+			border-radius: $imgsize/2;
+
+			@include dropshadow;
+		}
+	}
+	h2{
+		text-align:center;
+		font-size: $fontsize;
+		margin-top: $textpad;
+		font-weight:400;
+	}
+
+}
+
+@media screen and (max-width: 820px){
+	#about section{
+		display:block;
+		width:auto;
+		margin-right: $gridunit * 3;
+	}
+
+	#about section:nth-child(2){
+		margin-right: auto;
+		margin-left:auto
+	}
+
+	#about section:nth-child(3){
+	}
+}
