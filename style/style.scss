@@ -309,8 +309,8 @@ nav{
 		position:relative;
 		width:$gridunit * 15;
 		height:$gridunit * 15;
-		margin-left: $gridunit * 2;
-		margin-right: $gridunit * 2;
+		margin: $gridunit * 2;
+		margin-bottom:0;
 		img{
 			height:$gridunit * 15;
 
@@ -443,7 +443,25 @@ nav{
 		margin-right: auto;
 		margin-left:auto
 	}
+}
 
-	#about section:nth-child(3){
+@media screen and (max-width: 30 * $gridunit){
+	body{
+		min-width: 25 * $gridunit;
+	}
+
+	#intro{
+		 h1{
+			font-size: $gridunit * 4;
+			$voff: -$gridunit * 1.5;
+			top: $voff;
+			margin-bottom: $voff - $gridunit;
+		}
+		time{
+			font-size: $gridunit * 1.5;
+		}
+		p{
+			font-size: $gridunit;
+		}
 	}
 }
