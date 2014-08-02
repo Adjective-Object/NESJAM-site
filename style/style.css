@@ -86,6 +86,8 @@ nav {
     background-color: blue;
     -webkit-box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2); }
+  nav a:after, nav a:before {
+    pointer-events: none; }
   nav a:after {
     position: absolute;
     right: 13px;

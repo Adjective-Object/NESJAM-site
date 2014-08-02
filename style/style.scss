@@ -136,6 +136,10 @@ nav{
 		background-color:blue;
 		@include dropshadow-small;
 	}
+	a:after, a:before{
+		pointer-events:none;
+	}
+
 	a:after{
 		position:absolute;
 		right:1 + $gridunit/2;
