@@ -35,6 +35,11 @@ $darktext: desaturate(darken($c1, 40%), 70%);
 	box-shadow: 0 $gridunit $gridunit 0 rgba(0,0,0,0.2);
 }
 
+@mixin dropshadow-small{
+	-webkit-box-shadow: 0 $gridunit/2 $gridunit/2 0 rgba(0,0,0,0.2);
+	box-shadow: 0 $gridunit/2 $gridunit/2 0 rgba(0,0,0,0.2);
+}
+
 @font-face {
 	font-family: 'Pixel';
 	font-style: normal;
@@ -105,10 +110,12 @@ nav{
 
 	text-align:right;;
 	a{
+		position:relative;
 		display:block;
-		height:$gridunit * 2;
+		height:$gridunit;
+		margin-bottom:$gridunit/2;
+		margin-top:$gridunit/2;
 		font-size: $gridunit;
-		line-height:$gridunit;
 		color: $white;
 		@include transitions($transtime);
 		opacity:0.5;
@@ -119,14 +126,67 @@ nav{
 
 	a:before{
 		display: inline-block;
+		position:absolute;
+		right:$gridunit;
 		content: attr(data-text);
 		opacity:0;
 		@include transitions($transtime);
-		@include transform(translate($gridunit));
+		@include transform(translateX($gridunit));
+		padding: $gridunit / 4;
+		background-color:blue;
+		@include dropshadow-small;
 	}
+	a:after{
+		position:absolute;
+		right:1 + $gridunit/2;
+		top:$gridunit/2 - $gridunit/4 + 3px;
+		content:"";
+		border: $gridunit/2 solid;
+		border-color:transparent;
+		border-left-color:red;
+
+		@include transitions($transtime);
+		@include transform(translateX($gridunit));
+		opacity:0;
+	}
+
+	a:hover:after{
+		opacity:1;
+		@include transform(translateX(0));
+	}
+
 	a:hover:before{
 		opacity:1;
 		@include transform(translateX(-$gridunit/2));
+	}
+
+	$culp: 4%;
+
+	a[href="#intro"]{
+		&:before{
+			background-color:lighten($c2, $culp);
+		}
+		&:after{
+			border-left-color:lighten($c2, $culp);
+		}
+	}
+	
+	a[href="#about"]{
+		&:before{
+			background-color:lighten($c3, $culp);
+		}
+		&:after{
+			border-left-color:lighten($c3, $culp);
+		}
+	}
+
+	a[href="#faq"]{
+		&:before{
+			background-color:lighten($c5, $culp);
+		}
+		&:after{
+			border-left-color:lighten($c5, $culp);
+		}
 	}
 
 }
@@ -373,7 +433,6 @@ nav{
 	#about section{
 		display:block;
 		width:auto;
-		margin-right: $gridunit * 3;
 	}
 
 	#about section:nth-child(2){

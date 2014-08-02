@@ -51,10 +51,12 @@ nav {
   right: 24px;
   text-align: right; }
   nav a {
+    position: relative;
     display: block;
-    height: 48px;
+    height: 24px;
+    margin-bottom: 12px;
+    margin-top: 12px;
     font-size: 24px;
-    line-height: 24px;
     color: white;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -66,6 +68,8 @@ nav {
     opacity: 1; }
   nav a:before {
     display: inline-block;
+    position: absolute;
+    right: 24px;
     content: attr(data-text);
     opacity: 0;
     -webkit-transition: all 0.2s;
@@ -73,11 +77,41 @@ nav {
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-    -webkit-transform: translate(24px);
-    -moz-transform: translate(24px);
-    -ms-transform: translate(24px);
-    -o-transform: translate(24px);
-    transform: translate(24px); }
+    -webkit-transform: translateX(24px);
+    -moz-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    -o-transform: translateX(24px);
+    transform: translateX(24px);
+    padding: 6px;
+    background-color: blue;
+    -webkit-box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2); }
+  nav a:after {
+    position: absolute;
+    right: 13px;
+    top: 9px;
+    content: "";
+    border: 12px solid;
+    border-color: transparent;
+    border-left-color: red;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transform: translateX(24px);
+    -moz-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    -o-transform: translateX(24px);
+    transform: translateX(24px);
+    opacity: 0; }
+  nav a:hover:after {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
   nav a:hover:before {
     opacity: 1;
     -webkit-transform: translateX(-12px);
@@ -85,6 +119,18 @@ nav {
     -ms-transform: translateX(-12px);
     -o-transform: translateX(-12px);
     transform: translateX(-12px); }
+  nav a[href="#intro"]:before {
+    background-color: #ceb5b0; }
+  nav a[href="#intro"]:after {
+    border-left-color: #ceb5b0; }
+  nav a[href="#about"]:before {
+    background-color: #a38c9e; }
+  nav a[href="#about"]:after {
+    border-left-color: #a38c9e; }
+  nav a[href="#faq"]:before {
+    background-color: #a5c3b7; }
+  nav a[href="#faq"]:after {
+    border-left-color: #a5c3b7; }
 
 .content {
   max-width: 1200px;
@@ -252,8 +298,7 @@ nav {
 @media screen and (max-width: 820px) {
   #about section {
     display: block;
-    width: auto;
-    margin-right: 72px; }
+    width: auto; }
 
   #about section:nth-child(2) {
     margin-right: auto;
