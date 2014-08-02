@@ -8,12 +8,12 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
-  src: url(./fonts/Ralway/Raleway-Medium.woff) format("woff"); }
+  src: url(./fonts/Raleway/Raleway-Medium.woff) format("woff"); }
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 600;
-  src: url(./fonts/Ralway/Raleway-Semibold.woff) format("woff"); }
+  src: url(./fonts/Raleway/Raleway-Semibold.woff) format("woff"); }
 *, *:before, *:after {
   margin: 0;
   padding: 0;
