@@ -224,6 +224,8 @@ nav {
     margin-left: auto; }
     #faq .contact a {
       color: #f3faf7; }
+    #faq .contact a:hover {
+      text-decoration: underline; }
 
 #footer {
   margin: 24px;
