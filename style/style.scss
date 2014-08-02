@@ -78,7 +78,7 @@ body{
 	background-color: lighten(desaturate($c4, 7%), 5%);
 
 	& > section {
-		padding: $gridunit;
+		padding: $gridunit * 2;
 		position:relative;
 
 		background-attachment:fixed;
@@ -309,7 +309,8 @@ nav{
 		position:relative;
 		width:$gridunit * 15;
 		height:$gridunit * 15;
-		margin: $gridunit * 2;
+		margin-left: $gridunit * 2;
+		margin-right: $gridunit * 2;
 		img{
 			height:$gridunit * 15;
 
@@ -382,7 +383,7 @@ nav{
 	}
 
 	.contact{
-		margin: $gridunit;
+		margin-top: $gridunit;
 		color: lighten($c5,20%);
 		width: $gridunit * 20;
 		margin-right:auto;
@@ -404,7 +405,6 @@ nav{
 	$textpad: $gridunit/2;
 	margin:$gridunit;
 	padding:0;
-	height: $imgsize + $fontsize + $textpad;
 
 
 	.content > *{

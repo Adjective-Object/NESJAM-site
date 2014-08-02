@@ -28,7 +28,7 @@ body {
   min-width: 720px;
   background-color: #6b6486; }
   body > section {
-    padding: 24px;
+    padding: 48px;
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -213,7 +213,8 @@ nav {
     position: relative;
     width: 360px;
     height: 360px;
-    margin: 48px; }
+    margin-left: 48px;
+    margin-right: 48px; }
     #about .centeredimg img {
       height: 360px;
       position: absolute;
@@ -265,7 +266,7 @@ nav {
     position: relative;
     font-size: 18px; }
   #faq .contact {
-    margin: 24px;
+    margin-top: 24px;
     color: #d6e4de;
     width: 480px;
     margin-right: auto;
@@ -277,8 +278,7 @@ nav {
 
 #footer {
   margin: 24px;
-  padding: 0;
-  height: 132px; }
+  padding: 0; }
   #footer .content > * {
     display: block;
     margin-left: auto;
