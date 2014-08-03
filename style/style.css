@@ -224,7 +224,11 @@ nav {
       -moz-transform: rotate(15deg) scaleX(-1);
       -ms-transform: rotate(15deg) scaleX(-1);
       -o-transform: rotate(15deg) scaleX(-1);
-      transform: rotate(15deg) scaleX(-1); }
+      transform: rotate(15deg) scaleX(-1);
+      filter: drop-shadow(-7.2px 24px 8px rgba(0, 0, 0, 0.25));
+      /* Same syntax as box-shadow */
+      -webkit-filter: drop-shadow(-7.2px 24px 8px rgba(0, 0, 0, 0.25));
+      /* Same syntax as box-shadow */ }
   #about .content .imgs {
     display: block;
     margin-top: 48px;
