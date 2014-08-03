@@ -122,13 +122,18 @@ nav{
 	right:$gridunit;
 
 	$xof: -$gridunit/8;
-	$yof: -$gridunit * 3/16;
+	$yof: -$gridunit*0.3;
 
-	text-align:right;;
+	text-align:right;
 	a{
+		background-color:$white;
+
 		position:relative;
 		display:block;
 		height:$gridunit;
+		width:$gridunit;
+		border-radius: $gridunit/2;
+
 		margin-bottom:$gridunit/2;
 		margin-top:$gridunit/2;
 		font-size: $gridunit;
@@ -154,6 +159,7 @@ nav{
 	}
 	a:after, a:before{
 		pointer-events:none;
+		font-family: Raleway;
 	}
 
 	a:after{

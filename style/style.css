@@ -51,9 +51,12 @@ nav {
   right: 24px;
   text-align: right; }
   nav a {
+    background-color: white;
     position: relative;
     display: block;
     height: 24px;
+    width: 24px;
+    border-radius: 12px;
     margin-bottom: 12px;
     margin-top: 12px;
     font-size: 24px;
@@ -77,17 +80,18 @@ nav {
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-    -webkit-transform: translate(21px, -4.5px);
-    -moz-transform: translate(21px, -4.5px);
-    -ms-transform: translate(21px, -4.5px);
-    -o-transform: translate(21px, -4.5px);
-    transform: translate(21px, -4.5px);
+    -webkit-transform: translate(21px, -7.2px);
+    -moz-transform: translate(21px, -7.2px);
+    -ms-transform: translate(21px, -7.2px);
+    -o-transform: translate(21px, -7.2px);
+    transform: translate(21px, -7.2px);
     padding: 6px;
     background-color: blue;
     -webkit-box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2); }
   nav a:after, nav a:before {
-    pointer-events: none; }
+    pointer-events: none;
+    font-family: Raleway; }
   nav a:after {
     position: absolute;
     right: 13px;
@@ -101,26 +105,26 @@ nav {
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-    -webkit-transform: translate(21px, -4.5px);
-    -moz-transform: translate(21px, -4.5px);
-    -ms-transform: translate(21px, -4.5px);
-    -o-transform: translate(21px, -4.5px);
-    transform: translate(21px, -4.5px);
+    -webkit-transform: translate(21px, -7.2px);
+    -moz-transform: translate(21px, -7.2px);
+    -ms-transform: translate(21px, -7.2px);
+    -o-transform: translate(21px, -7.2px);
+    transform: translate(21px, -7.2px);
     opacity: 0; }
   nav a:hover:after {
     opacity: 1;
-    -webkit-transform: translate(-3px, -4.5px);
-    -moz-transform: translate(-3px, -4.5px);
-    -ms-transform: translate(-3px, -4.5px);
-    -o-transform: translate(-3px, -4.5px);
-    transform: translate(-3px, -4.5px); }
+    -webkit-transform: translate(-3px, -7.2px);
+    -moz-transform: translate(-3px, -7.2px);
+    -ms-transform: translate(-3px, -7.2px);
+    -o-transform: translate(-3px, -7.2px);
+    transform: translate(-3px, -7.2px); }
   nav a:hover:before {
     opacity: 1;
-    -webkit-transform: translate(-15px, -4.5px);
-    -moz-transform: translate(-15px, -4.5px);
-    -ms-transform: translate(-15px, -4.5px);
-    -o-transform: translate(-15px, -4.5px);
-    transform: translate(-15px, -4.5px); }
+    -webkit-transform: translate(-15px, -7.2px);
+    -moz-transform: translate(-15px, -7.2px);
+    -ms-transform: translate(-15px, -7.2px);
+    -o-transform: translate(-15px, -7.2px);
+    transform: translate(-15px, -7.2px); }
   nav a[href="#intro"]:before {
     background-color: #ceb5b0; }
   nav a[href="#intro"]:after {
