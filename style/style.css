@@ -80,11 +80,11 @@ nav {
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-    -webkit-transform: translate(21px, -7.2px);
-    -moz-transform: translate(21px, -7.2px);
-    -ms-transform: translate(21px, -7.2px);
-    -o-transform: translate(21px, -7.2px);
-    transform: translate(21px, -7.2px);
+    -webkit-transform: translate(21px, -8.4px);
+    -moz-transform: translate(21px, -8.4px);
+    -ms-transform: translate(21px, -8.4px);
+    -o-transform: translate(21px, -8.4px);
+    transform: translate(21px, -8.4px);
     padding: 6px;
     background-color: blue;
     -webkit-box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.2);
@@ -105,26 +105,26 @@ nav {
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-    -webkit-transform: translate(21px, -7.2px);
-    -moz-transform: translate(21px, -7.2px);
-    -ms-transform: translate(21px, -7.2px);
-    -o-transform: translate(21px, -7.2px);
-    transform: translate(21px, -7.2px);
+    -webkit-transform: translate(21px, -8.4px);
+    -moz-transform: translate(21px, -8.4px);
+    -ms-transform: translate(21px, -8.4px);
+    -o-transform: translate(21px, -8.4px);
+    transform: translate(21px, -8.4px);
     opacity: 0; }
   nav a:hover:after {
     opacity: 1;
-    -webkit-transform: translate(-3px, -7.2px);
-    -moz-transform: translate(-3px, -7.2px);
-    -ms-transform: translate(-3px, -7.2px);
-    -o-transform: translate(-3px, -7.2px);
-    transform: translate(-3px, -7.2px); }
+    -webkit-transform: translate(-3px, -8.4px);
+    -moz-transform: translate(-3px, -8.4px);
+    -ms-transform: translate(-3px, -8.4px);
+    -o-transform: translate(-3px, -8.4px);
+    transform: translate(-3px, -8.4px); }
   nav a:hover:before {
     opacity: 1;
-    -webkit-transform: translate(-15px, -7.2px);
-    -moz-transform: translate(-15px, -7.2px);
-    -ms-transform: translate(-15px, -7.2px);
-    -o-transform: translate(-15px, -7.2px);
-    transform: translate(-15px, -7.2px); }
+    -webkit-transform: translate(-15px, -8.4px);
+    -moz-transform: translate(-15px, -8.4px);
+    -ms-transform: translate(-15px, -8.4px);
+    -o-transform: translate(-15px, -8.4px);
+    transform: translate(-15px, -8.4px); }
   nav a[href="#intro"]:before {
     background-color: #ceb5b0; }
   nav a[href="#intro"]:after {
