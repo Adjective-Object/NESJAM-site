@@ -121,6 +121,9 @@ nav{
 	margin-top:-$gridunit * 4;
 	right:$gridunit;
 
+	$xof: -$gridunit/8;
+	$yof: -$gridunit * 3/16;
+
 	text-align:right;;
 	a{
 		position:relative;
@@ -144,7 +147,7 @@ nav{
 		content: attr(data-text);
 		opacity:0;
 		@include transitions($transtime);
-		@include transform(translateX($gridunit));
+		@include transform(translate($gridunit+$xof, $yof));
 		padding: $gridunit / 4;
 		background-color:blue;
 		@include dropshadow-small;
@@ -163,18 +166,18 @@ nav{
 		border-left-color:red;
 
 		@include transitions($transtime);
-		@include transform(translateX($gridunit));
+		@include transform(translate($gridunit+$xof, $yof));
 		opacity:0;
 	}
 
 	a:hover:after{
 		opacity:1;
-		@include transform(translateX(0));
+		@include transform(translate($xof, $yof));
 	}
 
 	a:hover:before{
 		opacity:1;
-		@include transform(translateX(-$gridunit/2));
+		@include transform(translate(-$gridunit/2 + $xof, $yof));
 	}
 
 	$culp: 4%;
