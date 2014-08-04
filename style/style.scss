@@ -125,6 +125,7 @@ nav{
 	$yof: -$gridunit*0.35;
 
 	text-align:right;
+	
 	a{
 		background-color:$white;
 
@@ -476,9 +477,9 @@ nav{
 	#intro{
 		 h1{
 			font-size: $gridunit * 4;
-			$voff: -$gridunit * 1.5;
+			$voff: 0;
 			top: $voff;
-			margin-bottom: $voff - $gridunit;
+			margin-bottom: 0;
 		}
 		time{
 			font-size: $gridunit * 1.5;

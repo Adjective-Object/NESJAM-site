@@ -319,8 +319,8 @@ nav {
 
   #intro h1 {
     font-size: 96px;
-    top: -36px;
-    margin-bottom: -60px; }
+    top: 0;
+    margin-bottom: 0; }
   #intro time {
     font-size: 36px; }
   #intro p {
