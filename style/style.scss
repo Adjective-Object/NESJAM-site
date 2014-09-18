@@ -48,6 +48,19 @@ $darktext: desaturate(darken($c1, 40%), 70%);
 	box-shadow: 0 $gridunit $gridunit 0 rgba(0,0,0,0.2);
 }
 
+@mixin dropshadow-filter-small{
+	filter: drop-shadow( 
+		0
+		$gridunit/2
+		$gridunit/2 
+		rgba(0,0,0,0.2) ); /* Same syntax as box-shadow */
+	-webkit-filter: drop-shadow( 
+		0
+		$gridunit /2
+		$gridunit /2 
+		rgba(0,0,0,0.2) ); /* Same syntax as box-shadow */
+}
+
 @mixin dropshadow-small{
 	-webkit-box-shadow: 0 $gridunit/2 $gridunit/2 0 rgba(0,0,0,0.2);
 	box-shadow: 0 $gridunit/2 $gridunit/2 0 rgba(0,0,0,0.2);
@@ -443,9 +456,7 @@ nav{
 			height: $imgsize;
 			height: $imgsize;
 
-			border-radius: $imgsize/2;
-
-			@include dropshadow;
+			@include dropshadow-filter-small;
 		}
 	}
 	h2{

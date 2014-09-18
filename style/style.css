@@ -296,9 +296,10 @@ nav {
     #footer a img {
       height: 96px;
       height: 96px;
-      border-radius: 48px;
-      -webkit-box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2);
-      box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2); }
+      filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.2));
+      /* Same syntax as box-shadow */
+      -webkit-filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.2));
+      /* Same syntax as box-shadow */ }
   #footer h2 {
     text-align: center;
     font-size: 24px;
